@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{33730D2B-03B5-412D-96AC-47282F92CC52}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>1.5</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\app.css" />
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="gethint.php" />
+    <Content Include="img\abaddon_hphover.png" />
+    <Content Include="img\alchemist_hphover.png" />
+    <Content Include="img\ancient_apparition_hphover.png" />
+    <Content Include="img\antimage_hphover.png" />
+    <Content Include="img\axe_hphover.png" />
+    <Content Include="img\bane_hphover.png" />
+    <Content Include="img\batrider_hphover.png" />
+    <Content Include="img\beastmaster_hphover.png" />
+    <Content Include="img\bloodseeker_hphover.png" />
+    <Content Include="img\bounty_hunter_hphover.png" />
+    <Content Include="img\brewmaster_hphover.png" />
+    <Content Include="img\bristleback_hphover.png" />
+    <Content Include="img\broodmother_hphover.png" />
+    <Content Include="img\centaur_hphover.png" />
+    <Content Include="img\chaos_knight_hphover.png" />
+    <Content Include="img\chen_hphover.png" />
+    <Content Include="img\clinkz_hphover.png" />
+    <Content Include="img\crystal_maiden_hphover.png" />
+    <Content Include="img\dark_seer_hphover.png" />
+    <Content Include="img\dazzle_hphover.png" />
+    <Content Include="img\death_prophet_hphover.png" />
+    <Content Include="img\disruptor_hphover.png" />
+    <Content Include="img\doom_bringer_hphover.png" />
+    <Content Include="img\dragon_knight_hphover.png" />
+    <Content Include="img\drow_ranger_hphover.png" />
+    <Content Include="img\earthshaker_hphover.png" />
+    <Content Include="img\earth_spirit_hphover.png" />
+    <Content Include="img\elder_titan_hphover.png" />
+    <Content Include="img\ember_spirit_hphover.png" />
+    <Content Include="img\enchantress_hphover.png" />
+    <Content Include="img\enigma_hphover.png" />
+    <Content Include="img\faceless_void_hphover.png" />
+    <Content Include="img\furion_hphover.png" />
+    <Content Include="img\gyrocopter_hphover.png" />
+    <Content Include="img\huskar_hphover.png" />
+    <Content Include="img\invoker_hphover.png" />
+    <Content Include="img\jakiro_hphover.png" />
+    <Content Include="img\juggernaut_hphover.png" />
+    <Content Include="img\keeper_of_the_light_hphover.png" />
+    <Content Include="img\kunkka_hphover.png" />
+    <Content Include="img\legion_commander_hphover.png" />
+    <Content Include="img\leshrac_hphover.png" />
+    <Content Include="img\lich_hphover.png" />
+    <Content Include="img\life_stealer_hphover.png" />
+    <Content Include="img\lina_hphover.png" />
+    <Content Include="img\lion_hphover.png" />
+    <Content Include="img\lone_druid_hphover.png" />
+    <Content Include="img\luna_hphover.png" />
+    <Content Include="img\lycan_hphover.png" />
+    <Content Include="img\magnataur_hphover.png" />
+    <Content Include="img\medusa_hphover.png" />
+    <Content Include="img\meepo_hphover.png" />
+    <Content Include="img\mirana_hphover.png" />
+    <Content Include="img\morphling_hphover.png" />
+    <Content Include="img\naga_siren_hphover.png" />
+    <Content Include="img\necrolyte_hphover.png" />
+    <Content Include="img\nevermore_hphover.png" />
+    <Content Include="img\night_stalker_hphover.png" />
+    <Content Include="img\nyx_assassin_hphover.png" />
+    <Content Include="img\obsidian_destroyer_hphover.png" />
+    <Content Include="img\ogre_magi_hphover.png" />
+    <Content Include="img\omniknight_hphover.png" />
+    <Content Include="img\oracle_hphover.png" />
+    <Content Include="img\phantom_assassin_hphover.png" />
+    <Content Include="img\phantom_lancer_hphover.png" />
+    <Content Include="img\phoenix_hphover.png" />
+    <Content Include="img\puck_hphover.png" />
+    <Content Include="img\pudge_hphover.png" />
+    <Content Include="img\pugna_hphover.png" />
+    <Content Include="img\queenofpain_hphover.png" />
+    <Content Include="img\rattletrap_hphover.png" />
+    <Content Include="img\razor_hphover.png" />
+    <Content Include="img\riki_hphover.png" />
+    <Content Include="img\rubick_hphover.png" />
+    <Content Include="img\sand_king_hphover.png" />
+    <Content Include="img\shadow_demon_hphover.png" />
+    <Content Include="img\shadow_shaman_hphover.png" />
+    <Content Include="img\shredder_hphover.png" />
+    <Content Include="img\silencer_hphover.png" />
+    <Content Include="img\skeleton_king_hphover.png" />
+    <Content Include="img\skywrath_mage_hphover.png" />
+    <Content Include="img\slardar_hphover.png" />
+    <Content Include="img\slark_hphover.png" />
+    <Content Include="img\sniper_hphover.png" />
+    <Content Include="img\spectre_hphover.png" />
+    <Content Include="img\spirit_breaker_hphover.png" />
+    <Content Include="img\storm_spirit_hphover.png" />
+    <Content Include="img\sven_hphover.png" />
+    <Content Include="img\techies_hphover.png" />
+    <Content Include="img\templar_assassin_hphover.png" />
+    <Content Include="img\terrorblade_hphover.png" />
+    <Content Include="img\tidehunter_hphover.png" />
+    <Content Include="img\tinker_hphover.png" />
+    <Content Include="img\tiny_hphover.png" />
+    <Content Include="img\treant_hphover.png" />
+    <Content Include="img\troll_warlord_hphover.png" />
+    <Content Include="img\tusk_hphover.png" />
+    <Content Include="img\undying_hphover.png" />
+    <Content Include="img\ursa_hphover.png" />
+    <Content Include="img\vengefulspirit_hphover.png" />
+    <Content Include="img\venomancer_hphover.png" />
+    <Content Include="img\viper_hphover.png" />
+    <Content Include="img\visage_hphover.png" />
+    <Content Include="img\warlock_hphover.png" />
+    <Content Include="img\weaver_hphover.png" />
+    <Content Include="img\windrunner_hphover.png" />
+    <Content Include="img\winter_wyvern_hphover.png" />
+    <Content Include="img\wisp_hphover.png" />
+    <Content Include="img\witch_doctor_hphover.png" />
+    <Content Include="img\zuus_hphover.png" />
+    <Content Include="index.html" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\npm.js" />
+    <Content Include="resources\heroes.txt" />
+    <Content Include="SelectHero.php" />
+    <Content Include="suggest.html" />
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="css\bootstrap-theme.css.map" />
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="packages.config" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>TypeScriptHTMLApp1</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60829</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60829/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+</Project>

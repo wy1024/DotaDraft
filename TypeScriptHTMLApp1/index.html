@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>TypeScript HTML App</title>
+
+    <!--style sheets-->
+    <link rel="stylesheet" href="css/app.css" type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!--scripts-->
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="app.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/app.css" rel="stylesheet" />
+    
+    
+</head>
+<body>
+    <div id="Title" class="col-md-8 col-md-offset-2">
+        <h1>Dota Hero Draft</h1>
+
+        <div id="content"></div>
+    </div>
+
+    <div id="teams" class="col-md-8 col-md-offset-2">
+        <div id="team1" class="col-md-5">
+            <div id="team1-hero1" class="selected"></div>
+            <div id="team1-hero2" class="selected"></div>
+            <div id="team1-hero3" class="selected"></div>
+            <div id="team1-hero4" class="selected"></div>
+            <div id="team1-hero5" class="selected"></div>
+        </div>
+
+        <div id="team2" class="col-md-5">
+            <div id="team2-hero1" class="selected"></div>
+            <div id="team2-hero2" class="selected"></div>
+            <div id="team2-hero3" class="selected"></div>
+            <div id="team2-hero4" class="selected"></div>
+            <div id="team2-hero5" class="selected"></div>
+        </div>
+    </div>
+
+
+    <div id="heroes" class="col-md-8 col-md-offset-2">
+        <div id="str" class="col-md-4 hero-section">
+            <img id="earthshaker" class="hero" src="img/earthshaker_hphover.png" />
+            <img id="sven" class="hero" src="img/sven_hphover.png" />
+            <img id="tiny" class="hero" src="img/tiny_hphover.png" />
+            <img id="kunkka" class="hero" src="img/kunkka_hphover.png" />
+            <img id="beastmaster" class="hero" src="img/beastmaster_hphover.png" />
+            <img id="dragon_knight" class="hero" src="img/dragon_knight_hphover.png" />
+            <img id="rattletrap" class="hero" src="img/rattletrap_hphover.png" />
+            <img id="omniknight" class="hero" src="img/omniknight_hphover.png" />
+            <img id="huskar" class="hero" src="img/huskar_hphover.png" />
+            <img id="alchemist" class="hero" src="img/alchemist_hphover.png" />
+            <img id="brewmaster" class="hero" src="img/brewmaster_hphover.png" />
+            <img id="treant" class="hero" src="img/treant_hphover.png" />
+            <img id="wisp" class="hero" src="img/wisp_hphover.png" />
+            <img id="centaur" class="hero" src="img/centaur_hphover.png" />
+            <img id="shredder" class="hero" src="img/shredder_hphover.png" />
+            <img id="bristleback" class="hero" src="img/bristleback_hphover.png" />
+            <img id="tusk" class="hero" src="img/tusk_hphover.png" />
+            <img id="elder_titan" class="hero" src="img/elder_titan_hphover.png" />
+            <img id="legion_commander" class="hero" src="img/legion_commander_hphover.png" />
+            <img id="earth_spirit" class="hero" src="img/earth_spirit_hphover.png" />
+            <img id="phoenix" class="hero" src="img/phoenix_hphover.png" />
+        </div>
+
+        <div id="agi" class="col-md-4 hero-section">
+            <img id="antimage" class="hero" src="img/antimage_hphover.png" />
+            <img id="drow_ranger" class="hero" src="img/drow_ranger_hphover.png" />
+            <img id="juggernaut" class="hero" src="img/juggernaut_hphover.png" />
+            <img id="mirana" class="hero" src="img/mirana_hphover.png" />
+            <img id="morphling" class="hero" src="img/morphling_hphover.png" />
+            <img id="phantom_lancer" class="hero" src="img/phantom_lancer_hphover.png" />
+            <img id="vengefulspirit" class="hero" src="img/vengefulspirit_hphover.png" />
+            <img id="riki" class="hero" src="img/riki_hphover.png" />
+            <img id="sniper" class="hero" src="img/sniper_hphover.png" />
+            <img id="templar_assassin" class="hero" src="img/templar_assassin_hphover.png" />
+            <img id="luna" class="hero" src="img/luna_hphover.png" />
+            <img id="bounty_hunter" class="hero" src="img/bounty_hunter_hphover.png" />
+            <img id="ursa" class="hero" src="img/ursa_hphover.png" />
+            <img id="gyrocopter" class="hero" src="img/gyrocopter_hphover.png" />
+            <img id="lone_druid" class="hero" src="img/lone_druid_hphover.png" />
+            <img id="naga_siren" class="hero" src="img/naga_siren_hphover.png" />
+            <img id="troll_warlord" class="hero" src="img/troll_warlord_hphover.png" />
+            <img id="ember_spirit" class="hero" src="img/ember_spirit_hphover.png" />
+        </div>
+
+        <div id="int" class="col-md-4 hero-section">
+            <img id="crystal_maiden" class="hero" src="img/crystal_maiden_hphover.png" />
+            <img id="puck" class="hero" src="img/puck_hphover.png" />
+            <img id="storm_spirit" class="hero" src="img/storm_spirit_hphover.png" />
+            <img id="windrunner" class="hero" src="img/windrunner_hphover.png" />
+            <img id="zuus" class="hero" src="img/zuus_hphover.png" />
+            <img id="lina" class="hero" src="img/lina_hphover.png" />
+            <img id="shadow_shaman" class="hero" src="img/shadow_shaman_hphover.png" />
+            <img id="tinker" class="hero" src="img/tinker_hphover.png" />
+            <img id="furion" class="hero" src="img/furion_hphover.png" />
+            <img id="enchantress" class="hero" src="img/enchantress_hphover.png" />
+            <img id="jakiro" class="hero" src="img/jakiro_hphover.png" />
+            <img id="chen" class="hero" src="img/chen_hphover.png" />
+            <img id="silencer" class="hero" src="img/silencer_hphover.png" />
+            <img id="ogre_magi" class="hero" src="img/ogre_magi_hphover.png" />
+            <img id="rubick" class="hero" src="img/rubick_hphover.png" />
+            <img id="disruptor" class="hero" src="img/disruptor_hphover.png" />
+            <img id="keeper_of_the_light" class="hero" src="img/keeper_of_the_light_hphover.png" />
+            <img id="skywrath_mage" class="hero" src="img/skywrath_mage_hphover.png" />
+            <img id="oracle" class="hero" src="img/oracle_hphover.png" />
+            <img id="techies" class="hero" src="img/techies_hphover.png" />
+        </div>
+
+
+        <div id="str2" class="col-md-4 hero-section">
+            <img id="axe" class="hero" src="img/axe_hphover.png" />
+            <img id="pudge" class="hero" src="img/pudge_hphover.png" />
+            <img id="sand_king" class="hero" src="img/sand_king_hphover.png" />
+            <img id="slardar" class="hero" src="img/slardar_hphover.png" />
+            <img id="tidehunter" class="hero" src="img/tidehunter_hphover.png" />
+            <img id="skeleton_king" class="hero" src="img/skeleton_king_hphover.png" />
+            <img id="life_stealer" class="hero" src="img/life_stealer_hphover.png" />
+            <img id="night_stalker" class="hero" src="img/night_stalker_hphover.png" />
+            <img id="doom_bringer" class="hero" src="img/doom_bringer_hphover.png" />
+            <img id="spirit_breaker" class="hero" src="img/spirit_breaker_hphover.png" />
+            <img id="lycan" class="hero" src="img/lycan_hphover.png" />
+            <img id="chaos_knight" class="hero" src="img/chaos_knight_hphover.png" />
+            <img id="undying" class="hero" src="img/undying_hphover.png" />
+            <img id="magnataur" class="hero" src="img/magnataur_hphover.png" />
+            <img id="abaddon" class="hero" src="img/abaddon_hphover.png" />
+        </div>
+
+        <div id="agi2" class="col-md-4 hero-section">
+            <img id="bloodseeker" class="hero" src="img/bloodseeker_hphover.png" />
+            <img id="nevermore" class="hero" src="img/nevermore_hphover.png" />
+            <img id="razor" class="hero" src="img/razor_hphover.png" />
+            <img id="venomancer" class="hero" src="img/venomancer_hphover.png" />
+            <img id="faceless_void" class="hero" src="img/faceless_void_hphover.png" />
+            <img id="phantom_assassin" class="hero" src="img/phantom_assassin_hphover.png" />
+            <img id="viper" class="hero" src="img/viper_hphover.png" />
+            <img id="clinkz" class="hero" src="img/clinkz_hphover.png" />
+            <img id="broodmother" class="hero" src="img/broodmother_hphover.png" />
+            <img id="weaver" class="hero" src="img/weaver_hphover.png" />
+            <img id="spectre" class="hero" src="img/spectre_hphover.png" />
+            <img id="meepo" class="hero" src="img/meepo_hphover.png" />
+            <img id="nyx_assassin" class="hero" src="img/nyx_assassin_hphover.png" />
+            <img id="slark" class="hero" src="img/slark_hphover.png" />
+            <img id="medusa" class="hero" src="img/medusa_hphover.png" />
+            <img id="terrorblade" class="hero" src="img/terrorblade_hphover.png" />
+        </div>
+
+
+        <div id="int2" class="col-md-4 hero-section">
+            <img id="bane" class="hero" src="img/bane_hphover.png" />
+            <img id="lich" class="hero" src="img/lich_hphover.png" />
+            <img id="lion" class="hero" src="img/lion_hphover.png" />
+            <img id="witch_doctor" class="hero" src="img/witch_doctor_hphover.png" />
+            <img id="enigma" class="hero" src="img/enigma_hphover.png" />
+            <img id="necrolyte" class="hero" src="img/necrolyte_hphover.png" />
+            <img id="warlock" class="hero" src="img/warlock_hphover.png" />
+            <img id="queenofpain" class="hero" src="img/queenofpain_hphover.png" />
+            <img id="death_prophet" class="hero" src="img/death_prophet_hphover.png" />
+            <img id="pugna" class="hero" src="img/pugna_hphover.png" />
+            <img id="dazzle" class="hero" src="img/dazzle_hphover.png" />
+            <img id="leshrac" class="hero" src="img/leshrac_hphover.png" />
+            <img id="dark_seer" class="hero" src="img/dark_seer_hphover.png" />
+            <img id="batrider" class="hero" src="img/batrider_hphover.png" />
+            <img id="ancient_apparition" class="hero" src="img/ancient_apparition_hphover.png" />
+            <img id="invoker" class="hero" src="img/invoker_hphover.png" />
+            <img id="obsidian_destroyer" class="hero" src="img/obsidian_destroyer_hphover.png" />
+            <img id="shadow_demon" class="hero" src="img/shadow_demon_hphover.png" />
+            <img id="visage" class="hero" src="img/visage_hphover.png" />
+            <img id="winter_wyvern" class="hero" src="img/winter_wyvern_hphover.png" />
+        </div>
+    </div>
+</body>
+</html>
