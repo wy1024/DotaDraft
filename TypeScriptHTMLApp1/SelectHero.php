@@ -84,32 +84,96 @@ class Team {
 	}
 
 	function pickHero($opponentTeam, $availableHeroes){
+        $bestHero = null;
+        $bestAdvantage = 0;
 
+        foreach($availableHeroes as $availableHero){
+            $totalAntiAdvantage = 0;
+            $totalCorpAdvantage = 0;
+
+            foreach($opponentTeam->team as $opponentTeamHero){
+                $antiIndex = $availableHero->getAntiIndex($opponentTeamHero->Name);
+                //print($antiIndex);
+                $totalAntiAdvantage = $totalAntiAdvantage + $antiIndex;
+            }
+
+            foreach($this->team as $corpTeamHero){
+                $corpIndex = $availableHero->getCorpIndex($corpTeamHero->Name);
+                $totalCorpAdvantage = $totalCorpAdvantage + $corpIndex;
+            }
+            $totalAdvantage = $totalAntiAdvantage + $totalCorpAdvantage;
+            if($totalAdvantage > $bestAdvantage){
+                $bestAdvantage = $totalAdvantage;
+                $bestHero = $availableHero;
+            }
+            print($availableHero->Name . $totalAdvantage . "/" . $totalAntiAdvantage . "/" . $totalCorpAdvantage);
+        }
+
+        return $bestHero;
 	}
 
 }
 
+function SelectHero(){
 
-
-// Read heroes from text
-//$lines = file("resources/heroes.txt");
-//foreach($lines as $heroName){
-//    $hero = new Hero($heroName);
-
-//}
+}
 
 
 $heroes = new Heroes();
 
-$hero = new Hero("batrider");
-$hero->addAntiIndex("antimage", 4.43);
-$heroes->addHero($hero);
-//$heroes->removeHero($hero);
+// Read heroes from text
+$lines = file("resources/heroes.txt");
+foreach($lines as $heroName){
+    $heroName = substr($heroName, 0, -2);
 
-$heroFound = $heroes->getHero("batrider");
-print($heroFound->Name);
-//$index = $heroFound->getAntiIndex("antimage");
-//print($index);
+    // Terrible terrible hack, i don't understand why php does this
+    if(strpos($heroName, "tiny") !== false){
+        $heroName = "tiny";
+    }
 
-//
+    $hero = new Hero($heroName);
+
+    // Add anti indexes
+    $path = "resources/HeroIndexes/" . $heroName;
+
+    //print(strlen($path . "_Anti.txt"));
+
+    $antiFile = file($path . "_Anti.txt");
+    foreach($antiFile as $antiLine){
+        $pieces = explode(" ", $antiLine);
+        $otherHero = $pieces[0];
+        $advantageString = $pieces[1];
+        $hero->addAntiIndex($otherHero, $advantageString);
+    }
+
+    // Add corp indexes
+    $corpFile = file($path . "_Corp.txt");
+    foreach($corpFile as $corpLine){
+        $pieces = explode(" ", $corpLine);
+        $otherHero = $pieces[0];
+        $advantageString = $pieces[1];
+        $hero->addCorpIndex($otherHero, $advantageString);
+    }
+
+    $heroes->addHero($hero);
+}
+
+
+$team1 = new Team();
+$team2 = new Team();
+
+// get the q parameter from URL
+$q = $_REQUEST["q"];
+$heroH = $heroes->getHero($q);
+$heroes->removeHero($heroH);
+
+$team1->addHeroToTeam($heroH);
+
+$ret = $team2->pickHero($team1, $heroes->heroes);
+
+
+echo $ret->Name;
+
+//var_dump($heroes);
+
 ?>

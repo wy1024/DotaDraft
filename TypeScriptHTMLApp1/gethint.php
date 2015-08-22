@@ -1,6 +1,8 @@
 <?php
 include_once("SelectHero.php");
 
+var_dump($heroes);
+
 
 // Array with names
 $a[] = "Anna";

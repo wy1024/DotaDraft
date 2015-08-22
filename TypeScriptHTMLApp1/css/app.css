@@ -1,7 +1,7 @@
 ﻿body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #141517;
-
+    color: #cfc3ac;
 }
 
 span {
@@ -24,15 +24,12 @@ span {
     border-radius: 5px;
 }
 
-
-
 .hero-section {
     float: left;
 }
 
 #Title {
     text-align: left;
-    color: #cfc3ac;
 }
 
 #team1, #team2 {
@@ -42,15 +39,18 @@ span {
     margin-top: 20px;
 }
 
-#teams, #heroes {
+#teams, #heroes, #suggestion {
     border-color:#cfc3ac;
     border-style: solid;
     /*border-radius: 8px;*/
     margin-bottom: 30px;
-    box-shadow: 5px 5px grey;
+    //box-shadow: 5px 5px grey;
 }
 
 #str2{
     clear: left;
 }
 
+#suggestion {
+    min-height: 100px;
+}
