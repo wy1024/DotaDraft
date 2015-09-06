@@ -1,4 +1,4 @@
-<?
+<?php
 
 class Hero {
 	var $Name;
@@ -24,12 +24,8 @@ class Hero {
 	}
 
 	function getCorpIndex($HeroName){
-		$this->CorpIndex[$HeroName];
+		return $this->CorpIndex[$HeroName];
 	}
-
-	//function __toString(){
-	//    return $this->Name;
-	//}
 }
 
 class Heroes {
@@ -44,8 +40,6 @@ class Heroes {
 	}
 
 	function getHero($heroName){
-		//print(count($this->heroes));
-
 		if(count($this->heroes) !== 0){
 			foreach($this->heroes as $hero){
 				if(strcmp($hero->Name, $heroName) == 0){
@@ -83,9 +77,11 @@ class Team {
 		}
 	}
 
-	function pickHero($opponentTeam, $availableHeroes){
-        $bestHero = null;
-        $bestAdvantage = 0;
+	function pickHero($thisTeam, $opponentTeam, $availableHeroes){
+        $sortedHeroArray = array();
+
+        //$bestHero = null;
+        //$bestAdvantage = 0;
 
         foreach($availableHeroes as $availableHero){
             $totalAntiAdvantage = 0;
@@ -93,52 +89,46 @@ class Team {
 
             foreach($opponentTeam->team as $opponentTeamHero){
                 $antiIndex = $availableHero->getAntiIndex($opponentTeamHero->Name);
-                //print($antiIndex);
                 $totalAntiAdvantage = $totalAntiAdvantage + $antiIndex;
             }
 
-            foreach($this->team as $corpTeamHero){
+            foreach($thisTeam->team as $corpTeamHero){
                 $corpIndex = $availableHero->getCorpIndex($corpTeamHero->Name);
                 $totalCorpAdvantage = $totalCorpAdvantage + $corpIndex;
             }
-            $totalAdvantage = $totalAntiAdvantage + $totalCorpAdvantage;
-            if($totalAdvantage > $bestAdvantage){
-                $bestAdvantage = $totalAdvantage;
-                $bestHero = $availableHero;
-            }
-            print($availableHero->Name . $totalAdvantage . "/" . $totalAntiAdvantage . "/" . $totalCorpAdvantage);
+            $totalAdvantage = $totalAntiAdvantage + $totalCorpAdvantage * 0.8;
+
+            //For values that are the same
+            $sortedHeroArray[$totalAdvantage*1000000 + rand(0, 1000)] = $availableHero;
         }
 
-        return $bestHero;
+        krsort($sortedHeroArray);
+
+        return $sortedHeroArray;
 	}
 
 }
-
-function SelectHero(){
-
-}
-
 
 $heroes = new Heroes();
 
 // Read heroes from text
 $lines = file("resources/heroes.txt");
-foreach($lines as $heroName){
-    $heroName = substr($heroName, 0, -2);
 
+foreach($lines as $heroName){
+    $heroName = substr($heroName, 0, -1);
+    
     // Terrible terrible hack, i don't understand why php does this
     if(strpos($heroName, "tiny") !== false){
         $heroName = "tiny";
     }
 
     $hero = new Hero($heroName);
-
-    // Add anti indexes
+    
+    // Build path to get file
+    $skill = $_REQUEST["skill"];
     $path = "resources/HeroIndexes/" . $heroName;
-
-    //print(strlen($path . "_Anti.txt"));
-
-    $antiFile = file($path . "_Anti.txt");
+    // Add anti indexes
+    $antiFile = file($path . "_Anti_" . $skill . ".txt");
     foreach($antiFile as $antiLine){
         $pieces = explode(" ", $antiLine);
         $otherHero = $pieces[0];
@@ -147,7 +137,7 @@ foreach($lines as $heroName){
     }
 
     // Add corp indexes
-    $corpFile = file($path . "_Corp.txt");
+    $corpFile = file($path . "_Corp_" . $skill . ".txt");
     foreach($corpFile as $corpLine){
         $pieces = explode(" ", $corpLine);
         $otherHero = $pieces[0];
@@ -155,25 +145,13 @@ foreach($lines as $heroName){
         $hero->addCorpIndex($otherHero, $advantageString);
     }
 
+    //var_dump($hero);
+
     $heroes->addHero($hero);
 }
-
 
 $team1 = new Team();
 $team2 = new Team();
 
-// get the q parameter from URL
-$q = $_REQUEST["q"];
-$heroH = $heroes->getHero($q);
-$heroes->removeHero($heroH);
-
-$team1->addHeroToTeam($heroH);
-
-$ret = $team2->pickHero($team1, $heroes->heroes);
-
-
-echo $ret->Name;
-
-//var_dump($heroes);
 
 ?>

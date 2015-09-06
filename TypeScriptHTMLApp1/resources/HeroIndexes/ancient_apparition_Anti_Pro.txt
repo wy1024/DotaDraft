@@ -1,0 +1,10 @@
+storm_spirit -35.18
+lion -18.44
+queenofpain -8.31
+rattletrap 8.73
+rubick 2.88
+gyrocopter -4.53
+lina 16.53
+winter_wyvern -9.51
+tusk 36.59
+earthshaker -6.64

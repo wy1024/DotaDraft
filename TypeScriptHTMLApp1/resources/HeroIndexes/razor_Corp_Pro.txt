@@ -1,0 +1,10 @@
+tusk 5.2
+earthshaker -25.19
+spirit_breaker -3.77
+witch_doctor 2.59
+undying 7.36
+dazzle -27.06
+gyrocopter 24.01
+queenofpain 0.59
+winter_wyvern 23
+lina -12.43

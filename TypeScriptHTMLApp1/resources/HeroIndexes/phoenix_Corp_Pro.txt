@@ -1,0 +1,13 @@
+disruptor 22
+tusk -5.36
+undying -4.48
+queenofpain -11.76
+rubick -6
+earthshaker 9.12
+lion 42.9
+nevermore 11.53
+lina 43.26
+storm_spirit -54.3
+gyrocopter 10.39
+dazzle 10.63
+winter_wyvern -5.88

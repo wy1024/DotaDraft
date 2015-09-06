@@ -1,0 +1,16 @@
+lina 28.14
+dark_seer -7.32
+rubick -2.23
+disruptor 21.88
+bloodseeker -0.93
+earthshaker -5.3
+lion 18.47
+tusk -18.16
+antimage 12.46
+spirit_breaker -13.2
+witch_doctor -14.81
+dazzle 11.13
+gyrocopter -2.69
+winter_wyvern 3.12
+rattletrap -5.9
+silencer -7.09

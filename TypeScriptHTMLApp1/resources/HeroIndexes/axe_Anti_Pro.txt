@@ -1,0 +1,3 @@
+earthshaker -0.28
+gyrocopter -10.58
+winter_wyvern -31.22

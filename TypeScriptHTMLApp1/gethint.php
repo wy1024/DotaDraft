@@ -1,61 +1,96 @@
 <?php
-include_once("SelectHero.php");
-
-var_dump($heroes);
-
-
-// Array with names
-$a[] = "Anna";
-$a[] = "Brittany";
-$a[] = "Cinderella";
-$a[] = "Diana";
-$a[] = "Eva";
-$a[] = "Fiona";
-$a[] = "Gunda";
-$a[] = "Hege";
-$a[] = "Inga";
-$a[] = "Johanna";
-$a[] = "Kitty";
-$a[] = "Linda";
-$a[] = "Nina";
-$a[] = "Ophelia";
-$a[] = "Petunia";
-$a[] = "Amanda";
-$a[] = "Raquel";
-$a[] = "Cindy";
-$a[] = "Doris";
-$a[] = "Eve";
-$a[] = "Evita";
-$a[] = "Sunniva";
-$a[] = "Tove";
-$a[] = "Unni";
-$a[] = "Violet";
-$a[] = "Liza";
-$a[] = "Elizabeth";
-$a[] = "Ellen";
-$a[] = "Wenche";
-$a[] = "Vicky";
+include("SelectHero.php");
 
 // get the q parameter from URL
-$q = $_REQUEST["q"];
+$t1_1 = $_REQUEST["t1_1"];
+$t1_2 = $_REQUEST["t1_2"];
+$t1_3 = $_REQUEST["t1_3"];
+$t1_4 = $_REQUEST["t1_4"];
+$t1_5 = $_REQUEST["t1_5"];
 
-$hint = "";
+$t2_1 = $_REQUEST["t2_1"];
+$t2_2 = $_REQUEST["t2_2"];
+$t2_3 = $_REQUEST["t2_3"];
+$t2_4 = $_REQUEST["t2_4"];
+$t2_5 = $_REQUEST["t2_5"];
 
-// lookup all hints from array if $q is different from "" 
-if ($q !== "") {
-    $q = strtolower($q);
-    $len=strlen($q);
-    foreach($a as $name) {
-        if (stristr($q, substr($name, 0, $len))) {
-            if ($hint === "") {
-                $hint = $name;
-            } else {
-                $hint .= ", $name";
-            }
-        }
-    }
+// Team 1
+if($t1_1 !== null){
+    $h = $heroes->getHero($t1_1);
+    $heroes->removeHero($h);
+    $team1->addHeroToTeam($h);
+}
+if($t1_2 !== null){
+    $h = $heroes->getHero($t1_2);
+    $heroes->removeHero($h);
+    $team1->addHeroToTeam($h);
+}
+if($t1_3 !== null){
+    $h = $heroes->getHero($t1_3);
+    $heroes->removeHero($h);
+    $team1->addHeroToTeam($h);
+}
+if($t1_4 !== null){
+    $h = $heroes->getHero($t1_4);
+    $heroes->removeHero($h);
+    $team1->addHeroToTeam($h);
+}
+if($t1_5 !== null){
+    $h = $heroes->getHero($t1_5);
+    $heroes->removeHero($h);
+    $team1->addHeroToTeam($h);
 }
 
-// Output "no suggestion" if no hint was found or output correct values 
-echo $hint === "" ? "no suggestion" : $hint;
+// Team 2
+if($t2_1 !== null){
+    $h = $heroes->getHero($t2_1);
+    $heroes->removeHero($h);
+    $team2->addHeroToTeam($h);
+}
+if($t2_2 !== null){
+    $h = $heroes->getHero($t2_2);
+    $heroes->removeHero($h);
+    $team2->addHeroToTeam($h);
+}
+if($t2_3 !== null){
+    $h = $heroes->getHero($t2_3);
+    $heroes->removeHero($h);
+    $team2->addHeroToTeam($h);
+}
+if($t2_4 !== null){
+    $h = $heroes->getHero($t2_4);
+    $heroes->removeHero($h);
+    $team2->addHeroToTeam($h);
+}
+if($t2_5 !== null){
+    $h = $heroes->getHero($t2_5);
+    $heroes->removeHero($h);
+    $team2->addHeroToTeam($h);
+}
+
+
+$ret1 = $team1->pickHero($team1, $team2, $heroes->heroes);
+$ret2 = $team2->pickHero($team2, $team1, $heroes->heroes);
+
+
+$numOfHeroesDisplayed = 0;
+foreach($ret1 as $advantagePoints => $heroReturned){
+    $numOfHeroesDisplayed++;
+    if($numOfHeroesDisplayed > 10){
+        break;
+    }
+    $formatedAdvantage = number_format((float)$advantagePoints/100000, 2, '.', '');
+    echo $heroReturned->Name . " " . $formatedAdvantage . "/";
+}
+
+$numOfHeroesDisplayed = 0;
+foreach($ret2 as $advantagePoints => $heroReturned){
+    $numOfHeroesDisplayed++;
+    if($numOfHeroesDisplayed > 10){
+        break;
+    }
+    $formatedAdvantage = number_format((float)$advantagePoints/100000, 2, '.', '');
+    echo $heroReturned->Name . " " . $formatedAdvantage . "/";
+}
+
 ?>

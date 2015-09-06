@@ -1,0 +1,9 @@
+lion -32.37
+queenofpain -21.61
+earthshaker -5.48
+dazzle 1.07
+witch_doctor 48.01
+gyrocopter 40.06
+rubick 32.92
+lina -21.06
+winter_wyvern 23.82

@@ -1,0 +1,6 @@
+lion 5.53
+gyrocopter -9.63
+queenofpain -24.9
+lina 30.12
+winter_wyvern 2
+earthshaker -13.21

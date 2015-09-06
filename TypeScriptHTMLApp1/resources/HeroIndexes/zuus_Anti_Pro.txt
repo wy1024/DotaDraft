@@ -1,0 +1,5 @@
+winter_wyvern 15.98
+dazzle -62.02
+gyrocopter 47.43
+tusk 19.02
+earthshaker 26.15

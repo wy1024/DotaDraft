@@ -1,0 +1,5 @@
+winter_wyvern -22.74
+lion -11.68
+gyrocopter -7.58
+earthshaker 50.85
+tusk 1.72
