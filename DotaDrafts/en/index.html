@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Dota Hero Draft</title>
+
+    <!--style sheets-->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="shortcut icon" type="/image/ico" href="/favicon.ico" />
+    <link rel="stylesheet" href="/css/app.css" type="text/css" />
+
+    <!--scripts-->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/app.js"></script>
+</head>
+
+<body>
+    <!-- Nav Bar -->
+    <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About/Faq</a></li>
+            <li><a href="example.html">Drafting Example</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="container adscontainer">
+        <div class="adsclass">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- responsive #2 -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-9596785465858576"
+                 data-ad-slot="1423977848"
+                 data-ad-format="auto"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Title -->
+        <div id="Title">
+            <h1>Dota Hero Draft</h1>
+        </div>
+
+        <!--Select Skill-->
+        <div id="skillDiv">
+            <select id="skill">
+                <option value="Normal">Skill Level Normal</option>
+                <option value="High">High</option>
+                <option value="VH">Very High</option>
+                <option value="Pro">Pro/Tournament</option>
+            </select>
+        </div>
+
+        <!-- Teams -->
+        <div id="teams">
+            <p>Your team picks</p>
+            <div id="team1" class="teambox">
+                <div id="team1-hero1" class="selected"></div>
+                <div id="team1-hero2" class="selected"></div>
+                <div id="team1-hero3" class="selected"></div>
+                <div id="team1-hero4" class="selected"></div>
+                <div id="team1-hero5" class="selected"></div>
+            </div>
+            <div id="team2" class="teambox">
+                <div id="team2-hero1" class="selected"></div>
+                <div id="team2-hero2" class="selected"></div>
+                <div id="team2-hero3" class="selected"></div>
+                <div id="team2-hero4" class="selected"></div>
+                <div id="team2-hero5" class="selected"></div>
+            </div>
+        </div>
+
+        <!-- Suggestion -->
+        <div id="suggestionDiv">
+            <p>Suggested hero picks</p>
+            <div id="suggestion">
+                <div id="suggestionLeft" class="suggestionDivElements"></div>
+                <div id="suggestionRight" class="suggestionDivElements"></div>
+            </div>
+        </div>
+
+        <!-- Heroes -->
+        <div id="heroes">
+            <p>Hero Pool</p>
+            <div id="str" class="col-xs-4 col-md-4 hero-section">
+                <div id="earthshaker" class="hero" style="background-image: url('/img/earthshaker_hphover.png')" title="earthshaker"><div class="left"></div><div class="right"></div></div>
+                <div id="sven" class="hero" style="background-image: url('/img/sven_hphover.png')" title="sven"><div class="left"></div><div class="right"></div></div>
+                <div id="tiny" class="hero" style="background-image: url('/img/tiny_hphover.png')" title="tiny"><div class="left"></div><div class="right"></div></div>
+                <div id="kunkka" class="hero" style="background-image: url('/img/kunkka_hphover.png')" title="kunkka"><div class="left"></div><div class="right"></div></div>
+                <div id="beastmaster" class="hero" style="background-image: url('/img/beastmaster_hphover.png')" title="beastmaster"><div class="left"></div><div class="right"></div></div>
+                <div id="dragon_knight" class="hero" style="background-image: url('/img/dragon_knight_hphover.png')" title="dragon_knight"><div class="left"></div><div class="right"></div></div>
+                <div id="rattletrap" class="hero" style="background-image: url('/img/rattletrap_hphover.png')" title="clockwerk"><div class="left"></div><div class="right"></div></div>
+                <div id="omniknight" class="hero" style="background-image: url('/img/omniknight_hphover.png')" title="omniknight"><div class="left"></div><div class="right"></div></div>
+                <div id="huskar" class="hero" style="background-image: url('/img/huskar_hphover.png')" title="huskar"><div class="left"></div><div class="right"></div></div>
+                <div id="alchemist" class="hero" style="background-image: url('/img/alchemist_hphover.png')" title="alchemist"><div class="left"></div><div class="right"></div></div>
+                <div id="brewmaster" class="hero" style="background-image: url('/img/brewmaster_hphover.png')" title="brewmaster"><div class="left"></div><div class="right"></div></div>
+                <div id="treant" class="hero" style="background-image: url('/img/treant_hphover.png')" title="treant"><div class="left"></div><div class="right"></div></div>
+                <div id="wisp" class="hero" style="background-image: url('/img/wisp_hphover.png')" title="wisp"><div class="left"></div><div class="right"></div></div>
+                <div id="centaur" class="hero" style="background-image: url('/img/centaur_hphover.png')" title="centaur"><div class="left"></div><div class="right"></div></div>
+                <div id="shredder" class="hero" style="background-image: url('/img/shredder_hphover.png')" title="timbersaw"><div class="left"></div><div class="right"></div></div>
+                <div id="bristleback" class="hero" style="background-image: url('/img/bristleback_hphover.png')" title="bristleback"><div class="left"></div><div class="right"></div></div>
+                <div id="tusk" class="hero" style="background-image: url('/img/tusk_hphover.png')" title="tusk"><div class="left"></div><div class="right"></div></div>
+                <div id="elder_titan" class="hero" style="background-image: url('/img/elder_titan_hphover.png')" title="elder_titan"><div class="left"></div><div class="right"></div></div>
+                <div id="legion_commander" class="hero" style="background-image: url('/img/legion_commander_hphover.png')" title="legion_commander"><div class="left"></div><div class="right"></div></div>
+                <div id="earth_spirit" class="hero" style="background-image: url('/img/earth_spirit_hphover.png')" title="earth_spirit"><div class="left"></div><div class="right"></div></div>
+                <div id="phoenix" class="hero" style="background-image: url('/img/phoenix_hphover.png')" title="phoenix"><div class="left"></div><div class="right"></div></div>
+            </div>
+
+            <div id="agi" class="col-xs-4 col-md-4 hero-section">
+                <div id="antimage" class="hero" style="background-image: url('/img/antimage_hphover.png')" title="antimage"><div class="left"></div><div class="right"></div></div>
+                <div id="drow_ranger" class="hero" style="background-image: url('/img/drow_ranger_hphover.png')" title="drow_ranger"><div class="left"></div><div class="right"></div></div>
+                <div id="juggernaut" class="hero" style="background-image: url('/img/juggernaut_hphover.png')" title="juggernaut"><div class="left"></div><div class="right"></div></div>
+                <div id="mirana" class="hero" style="background-image: url('/img/mirana_hphover.png')" title="mirana"><div class="left"></div><div class="right"></div></div>
+                <div id="morphling" class="hero" style="background-image: url('/img/morphling_hphover.png')" title="morphling"><div class="left"></div><div class="right"></div></div>
+                <div id="phantom_lancer" class="hero" style="background-image: url('/img/phantom_lancer_hphover.png')" title="phantom_lancer"><div class="left"></div><div class="right"></div></div>
+                <div id="vengefulspirit" class="hero" style="background-image: url('/img/vengefulspirit_hphover.png')" title="vengefulspirit"><div class="left"></div><div class="right"></div></div>
+                <div id="riki" class="hero" style="background-image: url('/img/riki_hphover.png')" title="riki"><div class="left"></div><div class="right"></div></div>
+                <div id="sniper" class="hero" style="background-image: url('/img/sniper_hphover.png')" title="sniper"><div class="left"></div><div class="right"></div></div>
+                <div id="templar_assassin" class="hero" style="background-image: url('/img/templar_assassin_hphover.png')" title="templar_assassin"><div class="left"></div><div class="right"></div></div>
+                <div id="luna" class="hero" style="background-image: url('/img/luna_hphover.png')" title="luna"><div class="left"></div><div class="right"></div></div>
+                <div id="bounty_hunter" class="hero" style="background-image: url('/img/bounty_hunter_hphover.png')" title="bounty_hunter"><div class="left"></div><div class="right"></div></div>
+                <div id="ursa" class="hero" style="background-image: url('/img/ursa_hphover.png')" title="ursa"><div class="left"></div><div class="right"></div></div>
+                <div id="gyrocopter" class="hero" style="background-image: url('/img/gyrocopter_hphover.png')" title="gyrocopter"><div class="left"></div><div class="right"></div></div>
+                <div id="lone_druid" class="hero" style="background-image: url('/img/lone_druid_hphover.png')" title="lone_druid"><div class="left"></div><div class="right"></div></div>
+                <div id="naga_siren" class="hero" style="background-image: url('/img/naga_siren_hphover.png')" title="naga_siren"><div class="left"></div><div class="right"></div></div>
+                <div id="troll_warlord" class="hero" style="background-image: url('/img/troll_warlord_hphover.png')" title="troll_warlord"><div class="left"></div><div class="right"></div></div>
+                <div id="ember_spirit" class="hero" style="background-image: url('/img/ember_spirit_hphover.png')" title="ember_spirit"><div class="left"></div><div class="right"></div></div>
+            </div>
+
+            <div id="int" class="col-xs-4 col-md-4 hero-section">
+                <div id="crystal_maiden" class="hero" style="background-image: url('/img/crystal_maiden_hphover.png')" title="crystal_maiden"><div class="left"></div><div class="right"></div></div>
+                <div id="puck" class="hero" style="background-image: url('/img/puck_hphover.png')" title="puck"><div class="left"></div><div class="right"></div></div>
+                <div id="storm_spirit" class="hero" style="background-image: url('/img/storm_spirit_hphover.png')" title="storm_spirit"><div class="left"></div><div class="right"></div></div>
+                <div id="windrunner" class="hero" style="background-image: url('/img/windrunner_hphover.png')" title="windrunner"><div class="left"></div><div class="right"></div></div>
+                <div id="zuus" class="hero" style="background-image: url('/img/zuus_hphover.png')" title="zues"><div class="left"></div><div class="right"></div></div>
+                <div id="lina" class="hero" style="background-image: url('/img/lina_hphover.png')" title="lina"><div class="left"></div><div class="right"></div></div>
+                <div id="shadow_shaman" class="hero" style="background-image: url('/img/shadow_shaman_hphover.png')" title="shadow_shaman"><div class="left"></div><div class="right"></div></div>
+                <div id="tinker" class="hero" style="background-image: url('/img/tinker_hphover.png')" title="tinker"><div class="left"></div><div class="right"></div></div>
+                <div id="furion" class="hero" style="background-image: url('/img/furion_hphover.png')" title="furion"><div class="left"></div><div class="right"></div></div>
+                <div id="enchantress" class="hero" style="background-image: url('/img/enchantress_hphover.png')" title="enchantress"><div class="left"></div><div class="right"></div></div>
+                <div id="jakiro" class="hero" style="background-image: url('/img/jakiro_hphover.png')" title="jakiro"><div class="left"></div><div class="right"></div></div>
+                <div id="chen" class="hero" style="background-image: url('/img/chen_hphover.png')" title="chen"><div class="left"></div><div class="right"></div></div>
+                <div id="silencer" class="hero" style="background-image: url('/img/silencer_hphover.png')" title="silencer"><div class="left"></div><div class="right"></div></div>
+                <div id="ogre_magi" class="hero" style="background-image: url('/img/ogre_magi_hphover.png')" title="ogre_magi"><div class="left"></div><div class="right"></div></div>
+                <div id="rubick" class="hero" style="background-image: url('/img/rubick_hphover.png')" title="rubick"><div class="left"></div><div class="right"></div></div>
+                <div id="disruptor" class="hero" style="background-image: url('/img/disruptor_hphover.png')" title="disruptor"><div class="left"></div><div class="right"></div></div>
+                <div id="keeper_of_the_light" class="hero" style="background-image: url('/img/keeper_of_the_light_hphover.png')" title="keeper_of_the_light"><div class="left"></div><div class="right"></div></div>
+                <div id="skywrath_mage" class="hero" style="background-image: url('/img/skywrath_mage_hphover.png')" title="skywrath_mage"><div class="left"></div><div class="right"></div></div>
+                <div id="oracle" class="hero" style="background-image: url('/img/oracle_hphover.png')" title="oracle"><div class="left"></div><div class="right"></div></div>
+                <div id="techies" class="hero" style="background-image: url('/img/techies_hphover.png')" title="techies"><div class="left"></div><div class="right"></div></div>
+            </div>
+
+            <div id="str2" class="col-xs-4 col-md-4 hero-section">
+                <div id="axe" class="hero" style="background-image: url('/img/axe_hphover.png')" title="axe"><div class="left"></div><div class="right"></div></div>
+                <div id="pudge" class="hero" style="background-image: url('/img/pudge_hphover.png')" title="pudge"><div class="left"></div><div class="right"></div></div>
+                <div id="sand_king" class="hero" style="background-image: url('/img/sand_king_hphover.png')" title="sand_king"><div class="left"></div><div class="right"></div></div>
+                <div id="slardar" class="hero" style="background-image: url('/img/slardar_hphover.png')" title="slardar"><div class="left"></div><div class="right"></div></div>
+                <div id="tidehunter" class="hero" style="background-image: url('/img/tidehunter_hphover.png')" title="tidehunter"><div class="left"></div><div class="right"></div></div>
+                <div id="skeleton_king" class="hero" style="background-image: url('/img/skeleton_king_hphover.png')" title="skeleton_king"><div class="left"></div><div class="right"></div></div>
+                <div id="life_stealer" class="hero" style="background-image: url('/img/life_stealer_hphover.png')" title="life_stealer"><div class="left"></div><div class="right"></div></div>
+                <div id="night_stalker" class="hero" style="background-image: url('/img/night_stalker_hphover.png')" title="night_stalker"><div class="left"></div><div class="right"></div></div>
+                <div id="doom_bringer" class="hero" style="background-image: url('/img/doom_bringer_hphover.png')" title="doom_bringer"><div class="left"></div><div class="right"></div></div>
+                <div id="spirit_breaker" class="hero" style="background-image: url('/img/spirit_breaker_hphover.png')" title="spirit_breaker"><div class="left"></div><div class="right"></div></div>
+                <div id="lycan" class="hero" style="background-image: url('/img/lycan_hphover.png')" title="lycan"><div class="left"></div><div class="right"></div></div>
+                <div id="chaos_knight" class="hero" style="background-image: url('/img/chaos_knight_hphover.png')" title="chaos_knight"><div class="left"></div><div class="right"></div></div>
+                <div id="undying" class="hero" style="background-image: url('/img/undying_hphover.png')" title="undying"><div class="left"></div><div class="right"></div></div>
+                <div id="magnataur" class="hero" style="background-image: url('/img/magnataur_hphover.png')" title="magnus"><div class="left"></div><div class="right"></div></div>
+                <div id="abaddon" class="hero" style="background-image: url('/img/abaddon_hphover.png')" title="abaddon"><div class="left"></div><div class="right"></div></div>
+            </div>
+
+            <div id="agi2" class="col-xs-4 col-md-4 hero-section">
+                <div id="bloodseeker" class="hero" style="background-image: url('/img/bloodseeker_hphover.png')" title="bloodseeker"><div class="left"></div><div class="right"></div></div>
+                <div id="nevermore" class="hero" style="background-image: url('/img/nevermore_hphover.png')" title="shadow fiend"><div class="left"></div><div class="right"></div></div>
+                <div id="razor" class="hero" style="background-image: url('/img/razor_hphover.png')" title="razor"><div class="left"></div><div class="right"></div></div>
+                <div id="venomancer" class="hero" style="background-image: url('/img/venomancer_hphover.png')" title="venomancer"><div class="left"></div><div class="right"></div></div>
+                <div id="faceless_void" class="hero" style="background-image: url('/img/faceless_void_hphover.png')" title="faceless_void"><div class="left"></div><div class="right"></div></div>
+                <div id="phantom_assassin" class="hero" style="background-image: url('/img/phantom_assassin_hphover.png')" title="phantom_assassin"><div class="left"></div><div class="right"></div></div>
+                <div id="viper" class="hero" style="background-image: url('/img/viper_hphover.png')" title="viper"><div class="left"></div><div class="right"></div></div>
+                <div id="clinkz" class="hero" style="background-image: url('/img/clinkz_hphover.png')" title="clinkz"><div class="left"></div><div class="right"></div></div>
+                <div id="broodmother" class="hero" style="background-image: url('/img/broodmother_hphover.png')" title="broodmother"><div class="left"></div><div class="right"></div></div>
+                <div id="weaver" class="hero" style="background-image: url('/img/weaver_hphover.png')" title="weaver"><div class="left"></div><div class="right"></div></div>
+                <div id="spectre" class="hero" style="background-image: url('/img/spectre_hphover.png')" title="spectre"><div class="left"></div><div class="right"></div></div>
+                <div id="meepo" class="hero" style="background-image: url('/img/meepo_hphover.png')" title="meepo"><div class="left"></div><div class="right"></div></div>
+                <div id="nyx_assassin" class="hero" style="background-image: url('/img/nyx_assassin_hphover.png')" title="nyx_assassin"><div class="left"></div><div class="right"></div></div>
+                <div id="slark" class="hero" style="background-image: url('/img/slark_hphover.png')" title="slark"><div class="left"></div><div class="right"></div></div>
+                <div id="medusa" class="hero" style="background-image: url('/img/medusa_hphover.png')" title="medusa"><div class="left"></div><div class="right"></div></div>
+                <div id="terrorblade" class="hero" style="background-image: url('/img/terrorblade_hphover.png')" title="terrorblade"><div class="left"></div><div class="right"></div></div>
+            </div>
+
+            <div id="int2" class="col-xs-4 col-md-4 hero-section">
+                <div id="bane" class="hero" style="background-image: url('/img/bane_hphover.png')" title="bane"><div class="left"></div><div class="right"></div></div>
+                <div id="lich" class="hero" style="background-image: url('/img/lich_hphover.png')" title="lich"><div class="left"></div><div class="right"></div></div>
+                <div id="lion" class="hero" style="background-image: url('/img/lion_hphover.png')" title="lion"><div class="left"></div><div class="right"></div></div>
+                <div id="witch_doctor" class="hero" style="background-image: url('/img/witch_doctor_hphover.png')" title="witch_doctor"><div class="left"></div><div class="right"></div></div>
+                <div id="enigma" class="hero" style="background-image: url('/img/enigma_hphover.png')" title="enigma"><div class="left"></div><div class="right"></div></div>
+                <div id="necrolyte" class="hero" style="background-image: url('/img/necrolyte_hphover.png')" title="necrolyte"><div class="left"></div><div class="right"></div></div>
+                <div id="warlock" class="hero" style="background-image: url('/img/warlock_hphover.png')" title="warlock"><div class="left"></div><div class="right"></div></div>
+                <div id="queenofpain" class="hero" style="background-image: url('/img/queenofpain_hphover.png')" title="queenofpain"><div class="left"></div><div class="right"></div></div>
+                <div id="death_prophet" class="hero" style="background-image: url('/img/death_prophet_hphover.png')" title="death_prophet"><div class="left"></div><div class="right"></div></div>
+                <div id="pugna" class="hero" style="background-image: url('/img/pugna_hphover.png')" title="pugna"><div class="left"></div><div class="right"></div></div>
+                <div id="dazzle" class="hero" style="background-image: url('/img/dazzle_hphover.png')" title="dazzle"><div class="left"></div><div class="right"></div></div>
+                <div id="leshrac" class="hero" style="background-image: url('/img/leshrac_hphover.png')" title="leshrac"><div class="left"></div><div class="right"></div></div>
+                <div id="dark_seer" class="hero" style="background-image: url('/img/dark_seer_hphover.png')" title="dark_seer"><div class="left"></div><div class="right"></div></div>
+                <div id="batrider" class="hero" style="background-image: url('/img/batrider_hphover.png')" title="batrider"><div class="left"></div><div class="right"></div></div>
+                <div id="ancient_apparition" class="hero" style="background-image: url('/img/ancient_apparition_hphover.png')" title="ancient_apparition"><div class="left"></div><div class="right"></div></div>
+                <div id="invoker" class="hero" style="background-image: url('/img/invoker_hphover.png')" title="invoker"><div class="left"></div><div class="right"></div></div>
+                <div id="obsidian_destroyer" class="hero" style="background-image: url('/img/obsidian_destroyer_hphover.png')" title="obsidian_destroyer"><div class="left"></div><div class="right"></div></div>
+                <div id="shadow_demon" class="hero" style="background-image: url('/img/shadow_demon_hphover.png')" title="shadow_demon"><div class="left"></div><div class="right"></div></div>
+                <div id="visage" class="hero" style="background-image: url('/img/visage_hphover.png')" title="visage"><div class="left"></div><div class="right"></div></div>
+                <div id="winter_wyvern" class="hero" style="background-image: url('/img/winter_wyvern_hphover.png')" title="winter_wyvern"><div class="left"></div><div class="right"></div></div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>

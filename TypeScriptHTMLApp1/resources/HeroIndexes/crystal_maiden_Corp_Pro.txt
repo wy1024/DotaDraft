@@ -1,7 +1,0 @@
-earthshaker 19.77
-gyrocopter -19.16
-nevermore -27.14
-lina 18.83
-winter_wyvern 8.1
-queenofpain -10.22
-dark_seer 38.86

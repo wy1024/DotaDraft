@@ -1,6 +1,0 @@
-lion 12.13
-dazzle -32.99
-tusk -3.51
-earthshaker -18.43
-winter_wyvern 41.01
-lina 31.85

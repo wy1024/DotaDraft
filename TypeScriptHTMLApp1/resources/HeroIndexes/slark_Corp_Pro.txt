@@ -1,6 +1,0 @@
-lion -31.37
-earthshaker 13.18
-tusk 24.55
-dark_seer -25.45
-winter_wyvern 5.78
-lina 0.14

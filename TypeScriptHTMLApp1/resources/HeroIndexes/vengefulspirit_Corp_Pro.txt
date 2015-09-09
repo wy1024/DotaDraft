@@ -1,2 +1,0 @@
-dazzle -4.16
-gyrocopter -1.78

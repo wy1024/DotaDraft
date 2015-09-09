@@ -1,3 +1,0 @@
-gyrocopter 9.29
-lion -56.16
-winter_wyvern 17.25
